@@ -1,0 +1,219 @@
+
+\documentclass[12pt]{article}
+\usepackage[a4paper]{geometry}
+\usepackage[myheadings]{fullpage}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{graphicx, wrapfig, subcaption, setspace, booktabs}
+\usepackage[T1]{fontenc}
+\usepackage[font=small, labelfont=bf]{caption}
+\usepackage{fourier}
+\usepackage[protrusion=true, expansion=true]{microtype}
+\usepackage[english]{babel}
+\usepackage{sectsty}
+\usepackage{url, lipsum}
+\usepackage[utf8]{inputenc}
+\usepackage{apalike}
+
+
+\newcommand{\HRule}[1]{\rule{\linewidth}{#1}}
+\onehalfspacing
+\setcounter{tocdepth}{5}
+\setcounter{secnumdepth}{5}
+
+%-------------------------------------------------------------------------------
+% HEADER & FOOTER
+%-------------------------------------------------------------------------------
+\pagestyle{fancy}
+\fancyhf{}
+\setlength\headheight{15pt}
+\fancyhead[L]{Eternity Project Report}
+
+%-------------------------------------------------------------------------------
+% TITLE PAGE
+%-------------------------------------------------------------------------------
+
+\begin{document}
+
+\title{ \normalsize \textsc{}
+		\\ [2.0cm]
+		\HRule{0.5pt} \\
+		\LARGE \textbf{\uppercase{Eternity Project Report}}
+		\HRule{2pt} \\ [0.5cm]
+		\normalsize  \vspace*{5\baselineskip}}
+
+
+\date{June 8, 2020}
+
+\author{
+        \vspace{1.5cm}
+       \LARGE ITERATION I \\
+        \vspace{0.5cm}
+        \LARGE Team L\\
+
+
+		Guanghui Zhang\\
+        Sasa Zhang\\
+        Shuo Zhang\\
+        Yingjie Zhou\\
+        Yiyang Zhou\\
+        Huanzhang Zhu\\
+ }
+
+\maketitle
+
+
+\newpage
+
+\tableofcontents
+\newpage
+
+\section{Introduction}
+
+The purpose of this document is to collect, analyze and define a deep understating of the end
+users’ needs and requirements for a scientific calculator. The objective of this project is then
+to develop and deliver one most suitable scientific calculator application accordingly.\newline\newline
+The scientific calculator that is going to be developed is called Eternity Scientific Calculator and will contain six major transcendental functions along with some subordinate functions.\newline\newline
+Eternity Scientific Calculator will be one deluxe version of the ordinary calculators written in Java, JavaScript, HTML and CSS.\newline\newline
+We will be using the Rational Unified Process, which is an Agile Software Development method and strongly embraces use cases for modeling requirements and building the foundation for a system \cite{abrahamsson2017agile}, as our software development method.\newline\newline
+The reason that we chose to adapt to the Rational Unified Process is because the proposed modeling method, UML, is particularly suited for object-oriented development and it does not implicitly rule out other methods \cite{jacobson1993object}.\newline\newline
+Terms used in this documentation such as “calculator”, “scientific calculator”, “software”, “product”, “program”, and “application” are all referring to the “Eternity Scientific Calculator”.
+
+\newpage
+\section{Team Organization and Collaboration Patterns}
+Our project team consists of six members and the assignment of tasks for each team member is requirement and activity driven. Our project task assignment is adapted for the Rational Unified Process.
+\subsection{Roles and Responsibilities}
+Our team members are all dedicated and engaged in the effort:\newline\newline
+Roles:
+\begin{enumerate}
+    \item Guanghui Zhang:  team lead, software designer, software developer and programmer.
+    \item Huangzhang Zhu: software developer, programmer and quality assurance engineer.
+    \item Shuo Zhang: software developer, programmer and quality assurance engineer.
+    \item Yiyang Zhou: information analyst, programmer and document developer.
+    \item Yingjie Zhou: information analyst, programmer and document developer.
+    \item Sasa Zhang: information analyst, programmer and document developer. \newline
+\end{enumerate}
+Responsibilities:
+\begin{enumerate}
+    \item Team lead: \newline
+    Guanghui Zhang has many years of experiences in web programming and web-based application design. He is responsible for Eternity calculator design in both frontend and backend (such as framework design and implementation). Besides, he is also reasonable for the software development (such as algorithms design and data structures design).
+    \item Software developer and quality assurance engineer: \newline
+    Huangzhang Zhu is mainly responsible for backend product development (such as algorithms implementation in Java and JavaScript) and Shuo Zhang is mainly responsible for frontend product development (such as algorithms implementation in JavaScript, HTML and CSS). They two are both responsible for quality assurance of the software.
+    \item Programmer: \newline
+    Each team member is responsible for coding a distinct transcendental function using Java.
+    \item Information analyst: \newline
+    Yiyang Zhou and Sasa Zhang are responsible for designing interview questions, performing interviews along with each team member, recording interviews and analyzing interview outcomes. In addition, all three information analysts are responsible for initializing potential personas and set of use cases.
+    \item Document developer: \newline
+    All three document developers are responsible for structuring and completing this documentation using Latex. Specially, Yiyang Zhou is mainly responsible for writing the section of problem description, organizing and proofreading the documentation and preparing this documentation using Latex. Yingjie Zhou is responsible for completing the section of problem conclusion. Sasa Zhang is responsible for finishing the parts of introduction and problem solution.
+\end{enumerate}
+\subsection{Collaboration Patterns Followed}
+According to \cite{robillard2000types}, our teamwork is divided into four types of collaborative activities:\newline
+\begin{enumerate}
+    \item Mandatory collaborative activities: \newline
+    Our team holds a formal brief meeting on a weekly basis and each team member is mandatory to attend. At each briefing, each team member reports on their individual task(s) progress and then summarizes what they have completed and what they haven’t completed. \newline
+    Each team member also needs to report on the difficulties they encountered but were solved and are encountering but are waiting to be solved during the process of finishing the task(s); in this way, the rest of team members could give timely feedback on the task(s) and offer proper support on the difficulties if possible.
+    \item Called collaborative activities: \newline
+    Our team holds unformal technical-issue related meetings constantly. Team members who work on the same part of the programming task(s) need frequent communication for, such as, information exchange, source code sharing, etc. These meetings are arranged only when necessary and are only between team members who are involved in the same task(s).
+    \item Ad hoc collaborative activities: \newline
+    Our team also holds unformal documentary-issue related meetings frequently. Like called collaborative activities, but these meetings only involve team members who work on the same documentation at the same time. It is imperative for team members who work on the same subject to synchronize their information sharing.
+    \item Individual activities: \newline
+    Each team member works on assigned task(s) independently. The task(s) assignment is based on each team member’s preferences and specialties. Each team member can seek for help from other members in any above-mentioned collaborative activities.
+
+\end{enumerate}
+
+\subsection{Meeting Schedule}
+Dummy text
+
+
+\subsection{Architecture and Technology}
+Dummy text
+
+\newpage
+\section{Interviews and Personas}
+
+\subsection{Interview Questions}
+Warm-up/pre-interview questions:
+\begin{enumerate}
+\item What is your full name?
+\item What is your current occupation?
+\item Please indicate on how many days within a week, you use a calculator?
+\item Do you know what are the transcendental functions on a calculator?
+\end{enumerate}
+Formal interview questions:
+\begin{enumerate}
+\item What do you use a calculator for?
+\item What functions do you use the most on a calculator?
+\item Can you name a few transcendental functions that you are familiar with?\newline
+      (If the interviewee answered “Yes” to Question 4)
+\item A transcendental function “transcends” algebra in that it cannot be expressed in terms\newline
+      of a finite sequence of the algebraic operations of addition, multiplication, and root\newline extraction [Wikipedia]. Exponential function, trigonometric functions and logarithm are all transcendental function; do these functions sound very familiar to you?
+\item What mathematical functions do you think are the must-have for a calculator?
+\item What features do you like the most of your calculator?\newline
+      (such as multifunctionality, aesthetics, user-friendliness, precision, price, etc.)
+\item What features do you think are the most important ones for a calculator?\newline
+      (such as multifunctionality, aesthetics, user-friendliness, precision, price, etc.)
+
+\item Are you willing to try a newly developed calculator application if it is your ideal one?\newlineIf
+      If not, why?
+\end{enumerate}
+
+\newpage
+\subsection{List of Potential Personas}
+Dummy text
+
+\subsection{Personas Derived from Interviews}
+Dummy text
+
+\subsection{Use Cases}
+Dummy text
+
+\section{Prototype}
+
+\subsection{Selected Functions}
+Dummy text
+including pseudo-code, algorithm and technical reasons
+
+\subsection{Process}
+Dummy text
+
+\subsubsection{Inclusion}
+Dummy text
+
+\subsubsection{Exclusion}
+Dummy text
+
+
+\section{Appendices}
+\subsection{Appendix A - Interview  }
+Dummy text
+interview results
+
+\subsection{Appendix B - Meeting Minutes}
+Dummy text
+meeting documents, things being discussed during the meeting
+
+\newpage
+\section{Glossary}
+Agile: \newline
+Document Developer: \newline
+Eclipse: \newline
+Git: \newline
+GitHub: \newline
+Information Analyst: \newline
+IntelliJ IDEA: \newline
+Java: \newline
+JavaScript: \newline
+Latex: \newline
+Object-Oriented Development: \newline
+Quality Assurance Engineer: \newline
+Software: \newline
+Software Designer: \newline
+Software Developer: \newline
+Programmer: \newline
+Transcendental Function: \newline
+UML: \newline
+WeChat: \newline
+
+\bibliographystyle{apalike}
+\bibliography{bibliography}
+\end{document}

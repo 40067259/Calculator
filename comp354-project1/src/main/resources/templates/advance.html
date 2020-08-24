@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:background-color="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <!------ Include the above in your HEAD tag ---------->
+    <link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.min.css}">
+    <link th:href="@{asserts/css/advance.css}"rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!--    Bootstrap card serving as the main UI of the calculator-->
+    <div class="calculator card text-right" th:style = "${background}">
+
+        <!--      #fff  card header-->
+        <div class="card-header " style="color: #fff">
+            <form th:action="@{/pattern}" method = "post" onsubmit="return validateForm()" id = "patternForm">
+                <div onclick="document.getElementById('patternForm').submit();" name = "pattern" value = "" id = "pattern"> ETERNITY CALCULATOR </div>
+            </form>
+        </div>
+        <!--        card body-->
+        <div class="card-body  ml=20px mr=20px">
+            <!--    HTML form connecting the front-end UI to the back-end-->
+            <form th:action="@{/}" method = "post" onsubmit="return validateForm()">
+                <!--                below are ports connecting to the backend. -->
+                <!--                their values are dynamically assigned by JavaScript and sent to back-end for processing. -->
+                <input type="text" name = "operand1" value ="" id="op1" hidden/>
+                <input type="text" name ="operator" value = "" id="op" hidden>
+                <input type="text" name  ="operand2" value = "" id="op2" hidden>
+                <input type="text" name ="operand3" value="" id="op3" hidden>
+                <h3 id="error" hidden>[[${error}]]</h3>
+                <!--                Bootstrap grid system is used to arrange buttons' layout -->
+                <div class="container-fluid">
+                    <!--                    1st row with 1 column-->
+                    <div class="row">
+                            <div class="col-12" >
+                                <!----------------------calculator screen---------------------------------->
+                                <input type="text"  class="calculator-screen z-depth-1" th:style="${display}" th:value = "${value}"  id="screen" disabled />
+                            </div>
+                    </div>
+
+
+                    <div class="row " >
+                        <!--                        button pi-->
+                        <div class="col-3 d-flex justify-content-center" >
+                            <button type="button" class="operator btn function special-operator" value="pi" id="pi">pi</button>
+                        </div>
+                        <!--                        button e-->
+                        <div class="col-3 d-flex justify-content-center ">
+                            <button type="button" class="operator btn function special-operator" value="e" id="e">e</button>
+                        </div>
+                        <!--                        button e^x-->
+                        <div class="col-3 d-flex justify-content-center">
+                            <button type="submit" class="operator btn special-operator function" value="exp" id="exp">e<sup>x</sup></button>
+                        </div>
+                        <!--                        button 10^x-->
+                        <div class="col-3 d-flex justify-content-center">
+                            <button type="submit" class="operator btn special-operator function" value="exp10" id="exp10" >10<sup>x</sup></button>
+                        </div>
+
+                    </div>
+                    <!--                    3rd row with 4 columns-->
+                    <div class="row" id="separator">
+                        <!--                        button x^y-->
+                        <div class="col-3 d-flex justify-content-center">
+                            <button type="button" class="operator btn special-operator function" value="pow" id="pow">x<sup>y</sup></button>
+                        </div>
+                        <!--                        button log-->
+                        <div class="col-3 d-flex justify-content-center">
+                            <button type="submit" class="operator btn special-operator function" value="log" id="log" >log</button>
+                        </div>
+                        <!--                        button sin-->
+                        <div class="col-3 d-flex justify-content-center ">
+                            <button type="submit" class="operator btn special-operator function" value="sin" id="sin">sin</button>
+                        </div>
+                        <!--                        button sinh-->
+                        <div class="col-3 d-flex justify-content-center">
+                            <button type="submit" class="operator btn special-operator function" value="sinh" id="sinh">sinh</button>
+                        </div>
+
+                    </div>
+                    <!--                    4th row with 4 columns-->
+                    <div class="row">
+                        <!--                        button MR-->
+                        <div class="col-3 d-flex justify-content-center">
+                            <button type="button" value="mr" class="btn" id="mr">mr</button>
+                        </div>
+                        <!--                        button MS-->
+                        <div class="col-3 d-flex justify-content-center">
+                            <button type="button" value="ms" class="btn" id="ms">ms</button>
+                        </div>
+                        <!--                        button AC-->
+                        <div class="col-3 d-flex justify-content-center">
+                            <button type="button" class="all-clear btn" value="all-clear" id="ac">ac</button>
+                        </div>
+                        <!--                        button divide-->
+                        <div class="col-3 d-flex justify-content-center">
+                            <button type="button" class="divide operator basic-operator btn "th:style="${button1}" value="/" id="divide">&#247</button>
+                        </div>
+
+                    </div>
+                    <!--                    5th row with 4 columns-->
+                    <div class="row">
+                        <!--                        button "7"-->
+                        <div class="col-3 d-flex justify-content-center">
+                            <button type="button" value="7" class="btn" id="seven">7</button>
+                        </div>
+                        <!--                        button "8"-->
+                        <div class="col-3 d-flex justify-content-center">
+                            <button type="button" value="8" class="btn" id="eight">8</button>
+                        </div>
+                        <!--                        button "9"-->
+                        <div class="col-3 d-flex justify-content-center">
+                            <button type="button" value="9" class="btn" id="nine">9</button>
+                        </div>
+                        <!--                        button multiply-->
+                        <div class="col-3 d-flex justify-content-center">
+                            <button type="button" class="multiply operator basic-operator btn "th:style="${button1}" value="*" id="multiply">&#215</button>
+                        </div>
+                    </div>
+                    <!--                    6th row with 4 columns-->
+                    <div class="row">
+                        <!--                        button "4"-->
+                        <div class="col-3 d-flex justify-content-center">
+                            <button type="button" value="4" class="btn" id="four">4</button>
+                        </div>
+                        <!--                        button "5"-->
+                        <div class="col-3 d-flex justify-content-center">
+                            <button type="button" value="5" class="btn" id="five">5</button>
+                        </div>
+                        <!--                        button "6"-->
+                        <div class="col-3 d-flex justify-content-center">
+                            <button type="button" value="6" class="btn" id="six">6</button>
+                        </div>
+                        <!--                        button minus-->
+                        <div class="col-3 d-flex justify-content-center">
+                            <button type="button" class="minus operator basic-operator btn " th:style="${button1}" value="-" id="minus">-</button>
+                        </div>
+                    </div>
+                    <!--                    7th row with 4 columns-->
+                    <div class="row" >
+                        <!--                        button "1"-->
+                        <div class="col-3 d-flex justify-content-center">
+                            <button type="button" value="1" class="btn" id="one" >1</button>
+                        </div>
+                        <!--                        button "2"-->
+                        <div class="col-3 d-flex justify-content-center">
+                            <button type="button" value="2" class="btn" id="two">2</button>
+                        </div>
+                        <!--                        button "3"-->
+                        <div class="col-3 d-flex justify-content-center">
+                            <button type="button" value="3" class="btn" id="three">3</button>
+                        </div>
+                        <!--                        button plus-->
+                        <div class="col-3 d-flex justify-content-center">
+                            <button type="button" class="plus operator basic-operator btn " th:style="${button1}" value="+" id="plus">+</button>
+                        </div>
+                    </div>
+                    <!--                    8th row with 4 columns-->
+                    <div class="row">
+                        <!--                        button "0"-->
+                        <div class="col-3 d-flex justify-content-center">
+                            <button type="button" value="0" class="btn" id="zero">0</button>
+                        </div>
+                        <!--                        button dot-->
+                        <div class="col-3 d-flex justify-content-center">
+                            <button type="button" class="decimal btn" value="." id="dot">.</button>
+                        </div>
+                        <!--                        button (-)-->
+                        <div class="col-3 d-flex justify-content-center">
+                            <button type="button" class=" btn" value="neg" id="neg">(-)</button>
+                        </div>
+                        <!--                        button equal -->
+                        <div class="col-3 d-flex justify-content-center">
+                            <button type="submit" style="" class="equal operator basic-operator btn " th:style="${equal}" value="=" id="equal">=</button>
+                        </div>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+        <!--        card footer-->
+        <div class="card-footer">
+            <footer  id = "footer" class="blockquote-footer justify-content-right">Calculator by <cite title="">Team L</cite></footer>
+        </div>
+    </div>
+
+
+    <div id = "complexCalc" class="card " style = "display: none; width: 540px; padding-left: 60px; padding-right: 40px; padding-top: 20px; padding-bottom: 20px; background: silver; margin: 0 auto;">
+        <form th:action="@{/complex}" method = "post" onsubmit="return validateForm()" id = "complex">
+
+            <input style = "height: 30px; width: 330px; vertical-align: middle; font-size: 150%" type = "textarea" placeholder = "expression to calculate" name = "operand3"/>
+            <button class = "" style = "height: 30px; vertical-align: middle" type = "submit">calculate</button>
+
+        </form>
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <script type="text/javascript" th:src="@{js/jquery.min.js}" ></script>
+    <script type="text/javascript" th:src="@{js/bootstrap.min.js}" ></script>
+    <script type="text/javascript" th:src="@{asserts/js/advance.js}"></script>
+</body>
+</html>
+
+
+

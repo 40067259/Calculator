@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    username: root
+    password: comp353
+    url: jdbc:mysql://localhost:3306/mysql
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    initialization-mode: always
+thymeleaf.cache: false
+server.port: 8082

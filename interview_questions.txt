@@ -1,0 +1,38 @@
+ETERNITY – Calculator
+Interview Questions
+
+Warm-up/pre-interview questions:
+1.	What is your full name?
+
+2.	What is your current occupation?
+
+3.	Please indicate on how many days within a week, you use a calculator?
+
+4.	Do you know what are the transcendental functions on a calculator?
+
+Formal interview questions:
+5.	What do you use a calculator for?
+
+6.	What functions do you use the most on a calculator?
+
+7.	Can you name a few transcendental functions that you are familiar with?
+    (If the interviewee answered “Yes” to Question 4)
+
+8.	A transcendental function “transcends” algebra in that it cannot be
+    expressed in terms of a finite sequence of the algebraic operations of
+    addition, multiplication, and root
+    extraction[https://en.wikipedia.org/wiki/Transcendental_function].
+    Exponential function, trigonometric functions and logarithm are all
+    transcendental function; do these functions sound very familiar to you?
+    (If the interviewee answered "No" to Question 4)
+
+9.	What mathematical functions do you think are the must-have for a calculator?
+
+10.	What features (multifunctionality, aesthetics, user-friendliness, precision,
+    price, etc.) do you like the most of your calculator?
+
+11.	What features do you think are the most important ones (multifunctionality,
+    aesthetics, user-friendliness, precision, price, etc.) for a calculator?
+
+12.	Are you willing to try a newly developed calculator application if it is
+    your ideal one? If not, why?

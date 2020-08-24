@@ -1,0 +1,367 @@
+
+\documentclass[12pt]{article}
+\usepackage[a4paper]{geometry}
+\usepackage[myheadings]{fullpage}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{graphicx, wrapfig, subcaption, setspace, booktabs}
+\usepackage[T1]{fontenc}
+\usepackage[font=small, labelfont=bf]{caption}
+\usepackage{fourier}
+\usepackage[protrusion=true, expansion=true]{microtype}
+\usepackage[english]{babel}
+\usepackage{sectsty}
+\usepackage{url, lipsum}
+\usepackage[utf8]{inputenc}
+\usepackage{apalike}
+\usepackage{listings}
+\usepackage{xcolor}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=mystyle}
+
+
+\newcommand{\HRule}[1]{\rule{\linewidth}{#1}}
+\onehalfspacing
+\setcounter{tocdepth}{5}
+\setcounter{secnumdepth}{5}
+
+%-------------------------------------------------------------------------------
+% HEADER & FOOTER
+%-------------------------------------------------------------------------------
+\pagestyle{fancy}
+\fancyhf{}
+\setlength\headheight{15pt}
+\fancyhead[L]{Eternity Project Report}
+
+%-------------------------------------------------------------------------------
+% TITLE PAGE
+%-------------------------------------------------------------------------------
+
+\begin{document}
+
+\title{ \normalsize \textsc{}
+		\\ [2.0cm]
+		\HRule{0.5pt} \\
+		\LARGE \textbf{\uppercase{Eternity Project Report}}
+		\HRule{2pt} \\ [0.5cm]
+		\normalsize  \vspace*{5\baselineskip}}
+
+
+\date{June 8, 2020}
+
+\author{
+        \vspace{1.5cm}
+       \LARGE ITERATION I \\
+        \vspace{0.5cm}
+        \LARGE Team L\\
+
+
+		Guanghui Zhang\\
+        Sasa Zhang\\
+        Shuo Zhang\\
+        Yingjie Zhou\\
+        Yiyang Zhou\\
+        Huanzhang Zhu\\
+ }
+
+\maketitle
+
+
+\newpage
+
+\tableofcontents
+\newpage
+\section{Introduction}
+The purpose of this document is to collect, analyze and define a deep understating of the end
+users’ needs and requirements for a scientific calculator. The objective of this project is then
+to develop and deliver one most suitable scientific calculator application accordingly.\newline\newline
+The scientific calculator that is going to be developed is called Eternity Scientific Calculator and will contain six major transcendental functions along with some subordinate functions.\newline\newline
+Eternity Scientific Calculator will be one deluxe version of the ordinary calculators written in Java, JavaScript, HTML and CSS.\newline\newline
+We will be using the Rational Unified Process, which is an Agile Software Development method and strongly embraces use cases for modeling requirements and building the foundation for a system \cite{abrahamsson2017agile}, as our software development method.\newline\newline
+The reason that we chose to adapt to the Rational Unified Process is because the proposed modeling method, UML, is particularly suited for object-oriented development and it does not implicitly rule out other methods \cite{jacobson1993object}.\newline\newline
+Terms used in this documentation such as “calculator”, “scientific calculator”, “software”, “product”, “program”, and “application” are all referring to the “Eternity Scientific Calculator”.
+\newpage
+\subsection{Project Team Organization}
+Our project team consists of six members and the assignment of tasks for each team member is requirement and activity driven:
+\begin{itemize}
+    \item Guanghui Zhang:  team lead, software designer, software developer and programmer.
+    \item Huangzhang Zhu: software developer, programmer and quality assurance engineer.
+    \item Shuo Zhang: software developer, programmer and quality assurance engineer.
+    \item Yiyang Zhou: information analyst, programmer and document developer.
+    \item Yingjie Zhou: information analyst, programmer and document developer.
+    \item Sasa Zhang: information analyst, programmer and document developer.
+\end{itemize}
+According to \cite{robillard2000types}, our teamwork is divided into four types of collaborative activities:
+\begin{enumerate}
+    \item Mandatory collaborative activities: \newline
+    Our team holds a formal brief meeting on a weekly basis and each team member is mandatory to attend. At each briefing, each team member reports on their individual task(s) progress and then summarizes what they have completed and what they haven’t completed. \newline
+    Each team member also needs to report on the difficulties they encountered but were solved and are encountering but are waiting to be solved during the process of finishing the task(s); in this way, the rest of team members could give timely feedback on the task(s) and offer proper support on the difficulties if possible.
+    \item Called collaborative activities: \newline
+    Our team holds informal technical-issue related meetings constantly. Team members who work on the same part of the programming task(s) need frequent communication for, such as, information exchange, source code sharing, etc. These meetings are arranged only when necessary and are only between team members who are involved in the same task(s).
+    \item Ad hoc collaborative activities: \newline
+    Our team also holds informal documentary-issue related meetings frequently. Like called collaborative activities, but these meetings only involve team members who work on the same documentation at the same time. It is imperative for team members who work on the same subject to synchronize their information sharing.
+    \item Individual activities: \newline
+    Each team member works on assigned task(s) independently. The task(s) assignment is based on each team member’s preferences and specialties. Each team member can seek for help from other members in any above-mentioned collaborative activities.
+\end{enumerate}
+\subsection{Collaboration Patterns}
+During the process of development for the Eternity calculator, we followed the complete collaboration patterns as suggested by \cite{koppe2015improving}:
+\begin{enumerate}
+    \item Clear up question: \newline
+          In our first formal brief meeting, we summarized the outline of the project, and broke down the project into steps which were then discussed one by one. We made sure that every team member understood what we were going to do to complete the project.
+    \item Share expectations: \newline
+          In our first formal brief meeting, we all shared our own expectations on the project with each other and we all made a commit to the best completion of this project.
+    \item Give a first warning: \newline
+          In our first formal brief meeting, each team member agreed on the fact that if anyone did not fulfill their assigned tasks properly and timely, the rest of the team would speak out the problem(s) and then ask that member to take corrective action within a given time frame.
+    \item Fill knowledge gaps: \newline
+          First of all, our team task(s) assignments were based both on the team member's preference and expertise. Whenever the team member encounters certain knowledge gaps, he or she could immediately ask for help and support from his or her subgroup members (who are team members working on the same part of the project), through setting up a called collaborative activity or an ad hoc collaborative activity.
+    \item Centralize work product management: \newline
+          To centralize the team work, we have a GitHub repository for updating and sharing the source code and backing up the documentation. In addition, we have an Overleaf repository for sharing the immediate version of the document that the subgroup members are working on.
+    \item Manage the report: \newline
+          The project tasks and responsibilities were assigned in our first formal brief meeting. Every week, we keep on updating and cross checking the tasks progress of each team member during subsequent formal brief meeting.
+    \item Mediate the dispute: \newline
+          Whenever there is a dispute, our team lead would help concerned team members with finding the cause and resolving the dispute.
+    \item Keep motivated: \newline
+          Our project tasks are assigned dynamically. Namely, when some team members find that they have too many tasks to complete alone, or encounter technical problems that they cannot solve individually, the team members could immediately seek help from other team members. Heavy workload tasks would be shared by other team members and technical difficulties would be worked out with the help of team members who know how-to. If some members encounter problems that no one could solve, we all then try to come up with an alternative solution.
+    \item Start immediately: \newline
+          In order to avoid any delays in the progress of the project, we made a timeline for the progress of the project and set a deadline for each task to be completed in our first formal brief meeting.
+    \item Regularly check requirements fulfillment: \newline
+          We strongly encourage both casual and formal communications with team members from time to time, in order to cross supervise the progress of each task for completion.
+    \item Spread tasks appropriately: \newline
+          Specific tasks were given at the first formal brief meeting, and those tasks were assigned based on team member's individual preferences and specialties.
+\end{enumerate}
+\subsection{Tasks Assignment}
+Our project task assignment is adapted for the Rational Unified Process. \newline
+Our team members are all dedicated and engaged in the effort:
+\begin{itemize}
+    \item Team lead: \newline
+    Guanghui Zhang has many years of experiences in web programming and web-based application design. He is responsible for Eternity calculator design in both front-end and back-end (such as framework design and implementation). Besides, he is also reasonable for the software development (such as algorithms design and data structures design).
+    \item Software developer and quality assurance engineer: \newline
+    Huangzhang Zhu is mainly responsible for back-end product development (such as algorithms implementation in Java and JavaScript) and Shuo Zhang is mainly responsible for front-end product development (such as algorithms implementation in JavaScript, HTML and CSS). They two are both responsible for quality assurance of the software.
+    \item Programmer: \newline
+    Each team member is responsible for coding a distinct transcendental function using Java.
+    \item Information analyst: \newline
+    Yiyang Zhou and Sasa Zhang are responsible for designing interview questions, performing interviews along with each team member, recording interviews and analyzing interview outcomes. In addition, all three information analysts are responsible for initializing potential personas and set of use cases.
+    \item Document developer: \newline
+    All three document developers are responsible for structuring and completing this documentation using Latex. Specially, Yiyang Zhou is mainly responsible for writing the section of problem description, organizing and proofreading the documentation and preparing this documentation using Latex. Yingjie Zhou is responsible for completing the section of problem conclusion. Sasa Zhang is responsible for finishing the parts of introduction and problem solution.
+\end{itemize}
+
+\section{Problem Description}
+Dummy Text
+
+\subsection{Interview Summary}
+Dummy Text
+
+\subsection{Potential Personas}
+Dummy Text
+
+\subsection{Use Cases}
+Dummy Text
+
+\subsection{Selected Functions}
+The transcendental functions that we finally decided to implement on the calculator are primarily based on the requirements
+collected through the interview process. \newline
+The selected functions are:
+\begin{enumerate}
+    \item $sin(x)$
+    \item $10^x$
+    \item $ln(x)$
+    \item $e^x$
+    \item $sinh(x)$
+    \item $x^y$
+\end{enumerate}
+
+
+\section{Problem Solution}
+Dummy Text
+
+\subsection{Outline of Strategy}
+Dummy text
+    \subsubsection{Algorithms and Data Structure}
+    Dummy Text
+    \subsubsection{Inclusions}
+    Dummy Text
+    \subsubsection{Exclusions}
+    Dummy Text
+
+\subsection{Architecture and Technology}
+\subsubsection{Architecture Overview}
+\subsubsection{Front-end Development}
+    The front-end of the calculator is developed using HTML, CSS and JavaScript. The HTML file is the "bone" of the front-end. It specifies the main structures of the web-based calculator and consists mainly of a HTML form used to connect to the back-end. The CSS file is the "skin" of the front-end. It uses the Bootstrap library to design the user interface of the calculator. This typical screen and buttons layout of the calculator is achieved with the help of Bootstrap card and grid. The JavaScript file is the "muscles" of the front-end. It adds interactivity to the UI, and falls under the event-driven programming paradigm. The JavaScript code mainly consists of DOM event listeners. Whenever an event occurs in the browser - such as clicking a button, the associated DOM event listener will trigger a function to do a specific task - such as displaying a number on the calculator screen.\newline 
+    
+    \noindent Below is a sample HTML code, it makes reference to Bootstrap classes: 
+    
+    \begin{lstlisting}[language=HTML]
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator by Team L</title>
+	<link rel="stylesheet" type="text/css" href="...">
+	...
+</head>
+<body>
+    <!--main UI designed using Bootstrap card-->
+    <div class="calculator card text-right">
+        <div class="card-header" style="color:#fff">
+            COMP354
+        </div>
+        <div class="card-body ml=20px mr=20px">
+            <!--main form connecting front-end and back-end-->
+            <form th:action="@{/advance}" method = "post" >
+            	...
+            </form>
+        </div>
+        <div class="card-footer">
+            ...
+        </div>
+    </div>
+    <script type="text/javascript" src="..."></script>
+    ...
+</body>
+</html>
+    \end{lstlisting}
+    
+    \noindent Below is a sample CSS code:
+    
+    \begin{lstlisting}[language=CSS]
+...
+.calculator-screen{
+    background-color:#b5ba7e;
+    margin-bottom: 30px;
+    color:#fff;
+    font-size:5em;
+}
+
+.card{
+    background-color: #343a40;
+    background-color:#b5ba7e;
+}
+...
+    \end{lstlisting}
+    \noindent Below is a sample JavaScript code: 
+    \begin{lstlisting}[language=Java]
+...
+//OPERATORS
+const plus = document.querySelector("#plus");
+plus.addEventListener("click",function(){
+    operand1=Number(screen.value);
+    operator="+";
+    resetScreen=true;
+    sendToBackend=false;
+})
+...
+//NUMBERS
+const zero = document.querySelector("#zero");
+zero.addEventListener("click",function(){
+    if(screen.value==="0"||resetScreen){
+        screen.value="0";
+    }
+    else{
+        screen.value+="0";
+    }
+
+    resetScreen=false;
+})
+...
+    \end{lstlisting}
+
+\noindent The focus of the front-end is to provide an interactive and easy to operator UI to the users of this calculator. It does not perform any calculation, and only transmits user inputs to the back-end where the calculations take place. However, the front-end is responsible for ensuring that all data received from the back-end are properly displayed to the users, within the limited space of the screen display. 
+
+\subsubsection{Back-end Development}
+
+
+\subsection{Technical Difficulties and Decision Making}
+Dummy text
+
+\subsection{Source Code Review Results}
+Dummy Text
+
+\section{Problem Conclusion}
+Dummy Text
+
+\subsection{Test Results}
+Dummy Text
+
+\subsection{README}
+Dummy Text
+
+\subsection{Glossary}
+Agile: \newline
+Document Developer: \newline
+Eclipse: \newline
+Git: \newline
+GitHub: \newline
+Information Analyst: \newline
+IntelliJ IDEA: \newline
+Java: \newline
+JavaScript: \newline
+Latex: \newline
+Object-Oriented Development: \newline
+Quality Assurance Engineer: \newline
+Software: \newline
+Software Designer: \newline
+Software Developer: \newline
+Programmer: \newline
+Transcendental Function: \newline
+UML: \newline
+WeChat: \newline
+
+
+
+\section{Appendices}
+\subsection{Appendix A - Interview Questions}
+Warm-up/pre-interview questions:
+\begin{enumerate}
+\item What is your full name?
+\item What is your current occupation?
+\item Please indicate on how many days within a week, you use a calculator?
+\item Do you know what are the transcendental functions on a calculator?
+\end{enumerate}
+Formal interview questions:
+\begin{enumerate}
+\item What do you use a calculator for?
+\item What functions do you use the most on a calculator?
+\item Can you name a few transcendental functions that you are familiar with?\newline
+      (If the interviewee answered “Yes” to Question 4)
+\item A transcendental function “transcends” algebra in that it cannot be expressed in terms\newline
+      of a finite sequence of the algebraic operations of addition, multiplication, and root\newline extraction [Wikipedia]. Exponential function, trigonometric functions and logarithm are all transcendental function; do these functions sound very familiar to you?
+\item What mathematical functions do you think are the must-have for a calculator?
+\item What features do you like the most of your calculator?\newline
+      (such as multifunctionality, aesthetics, user-friendliness, precision, price, etc.)
+\item What features do you think are the most important ones for a calculator?\newline
+      (such as multifunctionality, aesthetics, user-friendliness, precision, price, etc.)
+
+\item Are you willing to try a newly developed calculator application if it is your ideal one?\newlineIf
+      If not, why?
+\end{enumerate}
+
+\subsection{Appendix B - Meeting Minutes}
+Dummy text
+meeting documents, things being discussed during the meeting
+
+\bibliographystyle{apalike}
+\bibliography{bibliography}
+\end{document}

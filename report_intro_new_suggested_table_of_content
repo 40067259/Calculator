@@ -1,0 +1,144 @@
+TABLE OF CONTENTS
+1.	Introduction
+1.1	Project Team Organization
+1.2	Collaboration Patterns
+1.3	Task assignment
+
+2.	Problem Description
+2.1	 Interview Summary
+2.2	Potential Personas
+2.3	Use Cases
+2.4	Selected Functions
+
+3.	Problem Solution
+2.1 Outline of Strategy
+	2.1.1 Algorithms and Data Structure
+       2.1.2 Inclusions
+       2.1.3 Exclusions
+ 2.2 Technical Difficulties and Decision Making
+ 2.3 Source Code Review Results
+
+4.	Problem Conclusion
+3.1 Test Results
+3.2 README
+3.3 Glossary
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1. Introduction
+
+The purpose of this document is to collect, analyze and define a deep understating of the end users’ needs and requirements for a scientific calculator. The objective of this project is then to develop and deliver one most suitable scientific calculator application accordingly.
+
+The scientific calculator that is going to be developed is called Eternity Scientific Calculator and will contain six major transcendental functions along with some subordinate functions.
+
+Eternity Scientific Calculator will be one deluxe version of the ordinary calculators written in Java, JavaScript, HTML and CSS.
+We will be using the Rational Unified Process, which is an Agile Software Development method and strongly embraces use cases for modeling requirements and building the foundation for a system[https://arxiv.org/abs/1709.08439v1], as our software development method.
+
+The reason that we chose to adapt to the Rational Unified Process is because the proposed modeling method, UML, is particularly suited for object-oriented development and it does not implicitly rule out other methods [Jacobsen, I., M. Christerson, P. Jonsson and G. Overgaard (1994). Object-Oriented Software Engineering: A Use-Case-Driven Approach. Reading, MA, Addison-Wesley.].
+
+Terms used in this documentation such as “calculator”, “scientific calculator”, “software”, “product”, “program”, and “application” are all referring to the “Eternity Scientific Calculator”.
+
+1.1	Project Team Organization
+Our project team consists of six members and the assignment of tasks for each team member is requirement and activity driven:
+•	Guanghui Zhang:  team lead, software designer, software developer and programmer.
+
+•	Huangzhang Zhu: software developer, programmer and quality assurance engineer.
+
+•	Shuo Zhang: software developer, programmer and quality assurance engineer.
+
+•	Yiyang Zhou: information analyst, programmer and document developer.
+
+•	Yingjie Zhou: information analyst, programmer and document developer.
+
+•	Sasa Zhang: information analyst, programmer and document developer.
+
+1.2	Collaboration Patterns
+According to [https://www.cs.mcgill.ca/~martin/papers/jss2000.pdf], our teamwork is divided into four types of collaborative activities:
+1.	Mandatory collaborative activities
+
+Our team holds a formal brief meeting on a weekly basis and each team member is mandatory to attend. At each briefing, each team member reports on their individual task(s) progress and then summarizes what they have completed and what they haven’t completed.
+Each team member also needs to report on the difficulties they encountered but were solved and are encountering but are waiting to be solved during the process of finishing the task(s); in this way, the rest of team members could give timely feedback on the task(s) and offer proper support on the difficulties if possible.
+
+2.	Called collaborative activities
+
+Our team holds unformal technical-issue related meetings constantly. Team members who work on the same part of the programming task(s) need frequent communication for, such as, information exchange, source code sharing, etc. These meetings are arranged only when necessary and are only between team members who are involved in the same task(s).
+
+3.	Ad hoc collaborative activities
+
+Our team also holds unformal documentary-issue related meetings frequently. Like called collaborative activities, but these meetings only involve team members who work on the same documentation at the same time. It is imperative for team members who work on the same subject to synchronize their information sharing.
+
+4.	Individual activities
+
+Each team member works on assigned task(s) independently. The task(s) assignment is based on each team member’s preferences and specialties. Each team member can seek for help from other members in any above-mentioned collaborative activities.
+
+
+
+
+
+
+1.3	Task Assignment
+Our project task assignment is adapted for the Rational Unified Process.
+Our team members are all dedicated and engaged in the effort:
+Team lead: Guanghui Zhang has many years of experiences in web programming and web-based application design. He is responsible for Eternity calculator design in both frontend and backend (such as framework design and implementation). Besides, he is also reasonable for the software development (such as algorithms design and data structures design).
+Software developer and quality assurance engineer: Huangzhang Zhu is mainly responsible for backend product development (such as algorithms implementation in Java and JavaScript) and Shuo Zhang is mainly responsible for frontend product development (such as algorithms implementation in JavaScript, HTML and CSS). They two are both responsible for quality assurance of the software.
+Programmer: each team member is responsible for coding a distinct transcendental function using Java.
+Information analyst: Yiyang Zhou and Sasa Zhang are responsible for designing interview questions, performing interviews along with each team member, recording interviews and analyzing interview outcomes. In addition, all three information analysts are responsible for initializing potential personas and set of use cases.
+Document developer: all three document developers are responsible for structuring and completing this documentation using Latex. Specially, Yiyang Zhou is mainly responsible for writing the section of problem description, organizing and proofreading the documentation and preparing this documentation using Latex. Yingjie Zhou is responsible for completing the section of problem conclusion. Sasa Zhang is responsible for finishing the parts of introduction and problem solution.
+
+
+2. Problem Description
+2.1	Interview Summary
+2.2	Potential Personas
+2.3	Use Cases
+2.4	Selected Functions
+
+3	Problem Solution
+2.1 Outline of Strategy
+	2.1.1 Algorithms and Data Structure
+       2.1.2 Inclusions
+       2.1.3 Exclusions
+ 2.2 Technical Difficulties and Decision Making
+ 2.3 Source Code Review Results
+
+4	Problem Conclusion
+4.1	Test Results
+4.2	README
+4.3	Glossary
+Agile:
+Document Developer:
+Eclipse:
+Git:
+GitHub:
+Information Analyst:
+IntelliJ IDEA:
+Java:
+JavaScript:
+Latex:
+Object-Oriented Development:
+Quality Assurance Engineer:
+Software:
+Software Designer:
+Software Developer:
+Programmer:
+Transcendental Function:
+UML:
+WeChat:

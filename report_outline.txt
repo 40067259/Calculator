@@ -1,0 +1,30 @@
+Iteration 1
+1. Documentation (DELIVERABLE 1: due June 08 @ 23:00):
+    1) collaboration patterns followed;
+    2) selected functions;
+    3) initial list of potential personas;
+    4) list of interview questions and answers;
+    5) initial set of use cases;
+    6) an outline of the strategy, including algorithm(s) expressed as
+       pseudcode or otherwise in some 'standard' form and data structures, used
+       for implementation, inclusions and exclusions for Iteration 1 (to be
+       addressed in Iteration 2), and technical reasons for making decisions
+       (such as, those for inclusions and exclusions);
+       note: there is decision-making throughout development. For example,
+             a given function can usually be computed in more than one way.
+             It is acceptable to reduce the set of choices to not more than
+             three. In the end, this leads to selecting one option from a
+             given set of choices, knowing that each choice has its own
+             advantages and disadvantages.
+    7) source code review results (if any);
+    8) test results;
+    9) instructions on how to run the program;
+
+2. Source code.
+
+3. Data files (if any).
+
+4. A copy of the presentation slides (DELIVERABLE 2: due June 05 @ 16:15
+   - a presentation of how the development is organized;
+     and a demonstration of an initial version (prototype) of ETERNITY
+     in the class).
